@@ -6,6 +6,7 @@
 }
 body {
     background-color: var(--bs-primary-bg-subtle) !important;
+    min-height: 100vh !important;
 }
 /* #drop {
     color: white;
