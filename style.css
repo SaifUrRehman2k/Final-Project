@@ -5,8 +5,31 @@
     color: --bs-info-bg-subtle;
 }
 body {
-    background-color: var(--bs-primary-bg-subtle) !important;
+    background-image: url(./assets/images/bg.jpg) !important;
+    backdrop-filter: blur(6px);
+    background-position: center;
+    background-size: cover;
     min-height: 100vh !important;
+    min-width: 100vw;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar { 
+    width: 8px; 
+    /* border: 1px solid blue;  */
+} 
+::-webkit-scrollbar-track { 
+    background: var(--bs-dark); 
+} 
+::-webkit-scrollbar-thumb { 
+    background: var(--bs-secondary); 
+    border-radius: 1em !important;
+    width: 6px !important;
+} 
+#serchBox {
+    background-color: rgba(132, 132, 132, 0.419);
+}
+h1,h2,h3,h4 {
+    color: rgb(255, 253, 253) !important;
 }
 /* #drop {
     color: white;
@@ -23,5 +46,20 @@ select {
     text-transform: capitalize !important;
 }
 span[class="bl"] {
-    color: var(--bs-info);
+    color: var(--bs-light);
 }
+#locationCard, #cardContainer,#windCard {
+    background-color: rgba(255, 255, 255, 0.291);
+}
+#condition {
+    width: 40% !important;
+    height: 40% !important;
+}
+
+#windList {
+    background-color: rgba(49, 48, 48, 0.296) !important;
+}
+/* .shadow {
+    --bs-shadow-rgb: 255, 255, 255 !important;
+    box-shadow: 5px 10px 6px rgb(var(--bs-shadow-rgb)) !important;
+} */

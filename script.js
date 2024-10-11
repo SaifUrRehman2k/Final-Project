@@ -1,4 +1,4 @@
-alert("Search Loction For Results")
+// alert("Search Loction For Results")
 const WUrl = 'https://weatherapi-com.p.rapidapi.com/current.json?q=';
 const options = {
     method: 'GET',
@@ -39,6 +39,10 @@ Btn.addEventListener("click", () => {
             region.innerHTML  = result.location.region
             icon.innerHTML = `<img src="http:${result.current.condition.icon}">`
             text.innerHTML = result.current.condition.text
+            wind_kph.innerHTML = result.current.wind_kph
+            wind_degree.innerHTML = result.current.wind_degree
+            wind_dir.innerHTML = result.current.wind_dir
+            windchill_c.innerHTML = result.current.windchill_c
 
         } catch (error) {
             console.error(error);

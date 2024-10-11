@@ -16,129 +16,172 @@
   <link rel="icon" href="./assets/images/sun.png">
 </head>
 
-<body>
-  <nav class="navbar navbar-expand-lg bg-primary p-sm-3 p-3">
+<body >
+  <nav class="navbar navbar-expand-lg bg-primary p-sm-3 p-3 shadow">
     <div class="container-fluid p-0 p-sm-1 justify-content-center justify-content-sm-between">
       <a class="navbar-brand text-light mx-2 text-center text-sm-left" href="#">
         <h1>PakWeather</h1>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="btn btn-primary d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-        <ul class="nav nav-underline justify-content-end d-flex flex-column flex-sm-row">
-          <li class="nav-item">
-            <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="#">Sports</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="#">About</a>
-          </li>
-        </ul>
+
+      <div class="offcanvas-lg offcanvas-start" tabindex="-2" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title text-dark" id="offcanvasResponsiveLabel">Responsive offcanvas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <!-- <p class="mb-0">This is content within an <code>.offcanvas-lg</code>.</p> -->
+          <ul class="nav nav-underline justify-content-end d-flex flex-column flex-md-row">
+            <li class="nav-item">
+              <a class="nav-link active text-dark" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">Sports</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">About</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>
 
-  <div class="container-md m-auto p-3 d-flex justify-content-center">
-      <form class="d-flex">
-        <form class="d-flex" role="search">
-          <input id="searchBar" class="form-control" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="button" id="goBtn">GO</button>
+    <div class="container-fluid p-3 d-flex justify-content-center w-100" id="serchBox">
+        <form class="d-flex">
+          <form class="d-flex" role="search">
+            <input id="searchBar" class="form-control" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-danger" type="button" id="goBtn">GO</button>
+          </form>
+          <!-- <button class="btn btn-outline-success" type="submit" id="go">GO</button> -->
         </form>
-        <!-- <button class="btn btn-outline-success" type="submit" id="go">GO</button> -->
-      </form>
-  </div>
-  <!-- ------- card grids -------- -->
+    </div>
+    <!-- ------- card grids -------- -->
 
-  <div class="card m-auto mt-3 border border-success align-items-start justify-content-around" style="width: 80%;">
-    <div class="row g-0">
-      <div class="col rounded-right">
-        <div class="card-body">
-          <h2 class="card-title">Current Location</h2>
-          <h3 class="card-title text-success" id="nameCity"></h3>
-          <p>Latitude : <span id="lat" class="bl"></span>°</p>
-          <p>Longitude : <span id="lon" class="bl"></span>°</p>
-          <p>Localtime : <span id="localtime" class="bl"></span></p>
-          <p>Region : <span id="region" class="bl"></span></p>
-          <p class="card-text"><small class="text-body-secondary"></small></p>
+    
+
+    <div id="cardContainer" class="row row-cols-1 shadow row-cols-md-2 g-3 rounded-2 m-auto mt-4 mb-4 pb-4 container">
+      <div class="col-24 col-sm-12 d-flex align-items-center justify-content-center">
+        <div class="card text-bg-dark">
+          <img src="./assets/images/pexels-veeterzy-114979.jpg" class="card-img" alt="...">
+          <div class="card-img-overlay d-flex flex-column align-items-start justify-content-center p-4">
+            <div id="condition" class="d-flex flex-column justify-content-around">
+              <div id="icon" class=" d-flex align-items-start justify-content-start">O</div>
+              <h4 id="text" class="text-warning">N/A</h4>
+            </div>
+            <h3 class="card-text"><span id="temp_c">0</span>°C</h3>
+            <h4 class="card-text">Feels like <span id="feelslike_c">0</span>°C</h4>
+            <p class="card-text">last updated: <small class="text-body-light bl" id="last_updated">N/A</small></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-4 m-auto ">
+        <h3 class="w-100 text-center">Current Conditions</h3>
+        <div class="col">
+          <div class="card mb-3 m-auto" style="max-width: 18rem;">
+            <div class="card-header d-flex flex-row justify-content-start align-items-center gap-3 p-1 ms-2">
+              <!-- <h5 class="text-dark">Cloud</h5> -->
+              <svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px" fill="#676767"><path d="M532-131q-6 5-12.5 8t-14.5 3q-8 0-16-3.5t-14-9.5q-41-44-60.5-90T395-320q0-37 11-78t38-106q23-57 32-87.5t9-56.5q0-34-15-63.5T423-771q-6-6-9.5-14t-3.5-16q0-8 3-14.5t8-12.5q6-6 13.5-9t15.5-3q8 0 15 3t13 8q44 41 65.5 86t21.5 95q0 35-10.5 73.5T518-474q-25 60-34 92t-9 61q0 35 14.5 67.5T534-188q5 6 8 13t3 15q0 8-3 15.5T532-131Zm195 0q-6 5-12.5 8t-14.5 3q-8 0-16-3.5t-14-9.5q-41-44-60.5-89.5T590-319q0-37 11-79t38-106q23-57 32-87t9-56q0-34-15-64.5T618-771q-6-6-9-13.5t-3-15.5q0-8 2.5-14.5T616-827q6-6 14-9.5t16-3.5q8 0 14.5 3t12.5 8q44 41 65.5 86t21.5 95q0 35-10.5 73.5T713-473q-25 60-34 92t-9 60q0 35 15 68.5t45 65.5q5 6 7.5 13t2.5 14q0 8-3 16t-10 13Zm-390 0q-6 5-12.5 8t-14.5 3q-8 0-16-3.5t-14-9.5q-41-44-60.5-89.5T200-319q0-37 11-79t38-106q23-57 32-87t9-56q0-34-15-64.5T228-771q-7-6-10-13.5t-3-15.5q0-8 3-15t8-13q6-6 13.5-9t15.5-3q8 0 15 3t13 8q44 41 65.5 85.5T370-648q0 35-10 73.5T324-474q-25 60-34 92t-9 61q0 35 14.5 68.5T340-187q5 6 7.5 13t2.5 14q0 8-3 16t-10 13Z"/></svg>
+              <b>Heat Index</b>
+            </div>
+            <div class="card-body bg-primary text-light">
+              <h5 class="card-title"><span id="heatindex_c">0</span>°C</h5>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card mb-3 m-auto" style="max-width: 18rem;">
+            <div class="card-header d-flex flex-row justify-content-start align-items-center gap-3 p-1 ms-2">
+              <!-- <h5 class="text-dark">Cloud</h5> -->
+              <svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px" fill="#676767"><path d="M480-100q-133 0-226.5-92T160-416q0-63 24.5-120.5T254-638l226-222 226 222q45 44 69.5 101.5T800-416q0 132-93.5 224T480-100Zm0-80q100 0 170-68.5T720-416q0-47-18-89.5T650-580L480-748 310-580q-34 32-52 74.5T240-416q0 99 70 167.5T480-180Z"/></svg>
+              <b>Humidity</b>
+            </div>
+            <div class="card-body bg-primary text-light">
+              <h5 class="card-title"><span id="humidity">0</span>%</h5>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card mb-3 m-auto" style="max-width: 18rem;">
+            <div class="card-header d-flex flex-row justify-content-start align-items-center gap-3 p-1 ms-2">
+              <!-- <h5 class="text-dark">Cloud</h5> -->
+              <svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px" fill="#676767"><path d="M620-520q-25 0-42.5-17.5T560-580q0-17 9.5-34.5t20.5-32q11-14.5 20.5-24l9.5-9.5 9.5 9.5q9.5 9.5 20.5 24t20.5 32Q680-597 680-580q0 25-17.5 42.5T620-520Zm160-120q-25 0-42.5-17.5T720-700q0-17 9.5-34.5t20.5-32q11-14.5 20.5-24l9.5-9.5 9.5 9.5q9.5 9.5 20.5 24t20.5 32Q840-717 840-700q0 25-17.5 42.5T780-640Zm0 240q-25 0-42.5-17.5T720-460q0-17 9.5-34.5t20.5-32q11-14.5 20.5-24l9.5-9.5 9.5 9.5q9.5 9.5 20.5 24t20.5 32Q840-477 840-460q0 25-17.5 42.5T780-400ZM360-120q-83 0-141.5-58.5T160-320q0-48 21-89.5t59-70.5v-240q0-50 35-85t85-35q50 0 85 35t35 85v240q38 29 59 70.5t21 89.5q0 83-58.5 141.5T360-120ZM240-320h240q0-29-12.5-54T432-416l-32-24v-280q0-17-11.5-28.5T360-760q-17 0-28.5 11.5T320-720v280l-32 24q-23 17-35.5 42T240-320Z"/></svg>
+              <b>Dew Point</b>
+            </div>
+            <div class="card-body bg-primary text-light">
+              <h5 class="card-title"><span id="dewpoint_c">0</span>°C</h5>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card mb-3 m-auto" style="max-width: 18rem;">
+            <div class="card-header d-flex flex-row justify-content-start align-items-center gap-3 p-1 ms-2">
+              <!-- <h5 class="text-dark">Cloud</h5> -->
+              <svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px" fill="#676767"><path d="M260-160q-91 0-155.5-63T40-377q0-78 47-139t123-78q25-92 100-149t170-57q117 0 198.5 81.5T760-520q69 8 114.5 59.5T920-340q0 75-52.5 127.5T740-160H260Zm0-80h480q42 0 71-29t29-71q0-42-29-71t-71-29h-60v-80q0-83-58.5-141.5T480-720q-83 0-141.5 58.5T280-520h-20q-58 0-99 41t-41 99q0 58 41 99t99 41Zm220-240Z"/></svg>      
+              <b>Cloud</b> 
+            </div>
+            <div class="card-body bg-primary text-light">
+              <h5 class="card-title"><span id="cloud">0</span> p_c_t</h5>
+
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-
-  </div>
-
-  <div class="row row-cols-1 row-cols-md-2 g-3 m-auto mt-4 mb-4 pb-4 border border-primary rounded-2 container">
-    <div class="col d-flex align-items-center justify-content-center">
-      <div class="card text-bg-dark">
-        <img src="./assets/images/pexels-veeterzy-114979.jpg" class="card-img" alt="...">
-        <div class="card-img-overlay d-flex flex-column align-items-start justify-content-center">
-          <div id="condition">
-            <div id="icon" class=" d-flex align-items-start justify-content-start"></div>
-            <h2 id="text"></h2>
-          </div>
-          <h3 class="card-text"><span id="temp_c"></span>°C</h3>
-          <h4 class="card-text">Feels like <span id="feelslike_c"></span>°C</h4>
-          <p class="card-text"><small class="text-body-secondary bl" id="last_updated"></small></p>
-        </div>
-      </div>
-    </div>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-4 m-auto ">
-      <h3 class="w-100">Current Conditions</h3>
-      <div class="col" id="miniCards">
-        <div class="card mb-3 border-primary m-auto" style="max-width: 18rem;">
-          <div class="card-header">Heat Index</div>
-          <div class="card-body bg-success text-light">
-            <h5 class="card-title"><span id="heatindex_c"></span>°C</h5>
-
+    <div class="container d-flex flex-sm-row flex-column align-items-center justify-content-center gap-5">
+      <div id="locationCard" class="card shadow align-items-start justify-content-around w-md-50 w-100" style="max-width: 25em;">
+        <div class="row g-0">
+          <div class="col rounded-right">
+            <div class="card-body">
+              <h2 class="card-title">Current Location</h2>
+              <h3 class="card-title text-warning" id="nameCity">N/A</h3>
+              <ul class="list-group list-group-flush rounded-2">
+                <li class="list-group-item list-group-item-primary">Latitude: <span id="lat">0</span>°</li>
+                <li class="list-group-item list-group-item-primary">Longitude: <span id="lon">0</span>°</li>
+                <li class="list-group-item list-group-item-primary">Localtime: <span id="localtime">0-0-0-0</span></li>
+                <li class="list-group-item list-group-item-primary">Region: <span id="region">N/A</span></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="col" id="miniCards">
-        <div class="card border-primary mb-3 m-auto" style="max-width: 18rem;">
-          <div class="card-header">Humidity</div>
-          <div class="card-body bg-success text-light">
-            <h5 class="card-title"><span id="humidity"></span>%</h5>
-
+      <div id="windCard" class="card w-md-50 w-100 shadow" style="height: 17em; max-width: 20em;">
+        <div class="p-3 d-flex flex-column justify-content-between gap-3">
+          <div id="windIcon" class="d-flex flex-nowrap justify-content-start gap-3"> 
+            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#F0F0F0"><path d="M460-160q-50 0-85-35t-35-85h80q0 17 11.5 28.5T460-240q17 0 28.5-11.5T500-280q0-17-11.5-28.5T460-320H80v-80h380q50 0 85 35t35 85q0 50-35 85t-85 35ZM80-560v-80h540q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43h-80q0-59 40.5-99.5T620-840q59 0 99.5 40.5T760-700q0 59-40.5 99.5T620-560H80Zm660 320v-80q26 0 43-17t17-43q0-26-17-43t-43-17H80v-80h660q59 0 99.5 40.5T880-380q0 59-40.5 99.5T740-240Z"/></svg>
+            <h2>Wind</h2>
           </div>
-        </div>
-      </div>
-
-      <div class="col" id="miniCards">
-        <div class="card border-primary mb-3 m-auto" style="max-width: 18rem;">
-          <div class="card-header">Dew Point</div>
-          <div class="card-body bg-success text-light">
-            <h5 class="card-title"><span id="dewpoint_c"></span>°C</h5>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="col" id="miniCards">
-        <div class="card border-primary mb-3 m-auto" style="max-width: 18rem;">
-          <div class="card-header">Cloud</div>
-          <div class="card-body bg-success text-light">
-            <h5 class="card-title"><span id="cloud"></span>PCT</h5>
-
+          <h5 class="card-title">Direction: <span id="wind_dir">N/A</span></h5>
+          <div class="card" style="max-width: 80% !important;">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item list-group-item-primary">Speed: <span id="wind_kph">0</span>kph</li>
+              <li class="list-group-item list-group-item-primary">Degree: <span id="wind_degree">0</span>°</li>
+              <li class="list-group-item list-group-item-primary">Wind-Cill: <span id="windchill_c">0</span>°C</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="container-fluid bg-primary mb-0 mt-5">
-    <footer
-      class="d-flex flex-wrap justify-content-sm-between justify-content-center align-items-center py-3 mt-3 border-top gap-3">
+  <div class="container-fluid bg-primary footer navbar-fixed-bottom">
+    <footer class="d-flex flex-wrap justify-content-sm-between justify-content-center align-items-center py-3 mt-3 border-top gap-3">
       <div class="col-md-6 d-flex align-items-center gap-sm-3 gap-1 flex-wrap justify-content-center">
         <a href="/" class="nav-link">
           <h3 class="m-1">PakWeather</h3>
