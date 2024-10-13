@@ -1,5 +1,5 @@
 // alert("Search Loction For Results")
-const WUrl = 'https://weatherapi-com.p.rapidapi.com/current.json?q=';
+const WUrl = `https://weatherapi-com.p.rapidapi.com/forecast.json?q=`;
 const options = {
     method: 'GET',
     headers: {
@@ -43,6 +43,7 @@ Btn.addEventListener("click", () => {
             wind_degree.innerHTML = result.current.wind_degree
             wind_dir.innerHTML = result.current.wind_dir
             windchill_c.innerHTML = result.current.windchill_c
+            gust_kph.innerHTML = result.current.gust_kph
 
         } catch (error) {
             console.error(error);
