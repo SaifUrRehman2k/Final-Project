@@ -1,86 +1,81 @@
-body{
-    cursor: pointer;
+.primary-subtle {
+    color: --bs-primary-bg-subtle;
 }
-.item{
-    /* background-color: #ebebeb; */
-    width: 12vw;
-    position: relative;
-    left: 38rem;
-    bottom: 9rem;
+.info-subtle{
+    color: --bs-info-bg-subtle;
 }
-.people{
-    position: relative;
-    left: 15rem;
-    top: 4rem;
-    width: 22vw;
-
+body {
+    background-image: linear-gradient(rgba(0, 115, 215, 0.798),rgba(85, 173, 250, 0.798)) !important;
+    /* backdrop-filter: blur(6px); */
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh !important;
+    min-width: 100vw;
+    overflow-x: hidden;
 }
-.clouds{
-    position: relative;
-    width: 14vw;
-    bottom: 16rem;
-    left: 18rem;
-    mix-blend-mode: darken;
+::-webkit-scrollbar { 
+    width: 8px; 
+    /* border: 1px solid blue;  */
+} 
+::-webkit-scrollbar-track { 
+    background: var(--bs-dark); 
+} 
+::-webkit-scrollbar-thumb { 
+    background: var(--bs-secondary); 
+    border-radius: 1em !important;
+    width: 6px !important;
+} 
+#serchBox {
+    background-color: rgba(132, 132, 132, 0.419);
 }
-.sun{
-    position: relative;
-    width: 15vw;
-    bottom: 28rem;
-    left: 13rem;
-    mix-blend-mode: darken;
+h1,h2,h3,h4 {
+    color: rgb(255, 253, 253) !important;
 }
-.head-1{
-    position: relative;
-    bottom: 17rem;
-    text-align: center;
-    font-weight: bold;
-    font-family: Poppins, sans-serif;
-    /* color: white;
-    text-shadow: 2px 2px 4px #000000; */
+/* #drop {
     color: white;
-  text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px rgb(180, 180, 182);
+} */
+a[class="text-muted"] > svg{
+    width: 24px;
+    height: 24px;
+    fill: white;
+}
+select {
+    width: 100% !important;
+}
+#nameCity {
+    text-transform: capitalize !important;
+}
+span[class="bl"] {
+    color: var(--bs-light);
+}
+#locationCard, #cardContainer,#windCard {
+    background-color: rgba(255, 255, 255, 0.291);
+}
+#condition {
+    width: 40% !important;
+    height: 40% !important;
+}
 
+#windList {
+    background-color: rgba(49, 48, 48, 0.296) !important;
 }
-.head-1:hover{
-    transition: transform 0.5s ease-in-out;
-    transform: translateY(-15px);
-    text-decoration: underline;
+.shadow {
+    --bs-shadow-rgb: 255, 255, 255 !important;
+    box-shadow: 5px 10px 6px rgb(var(--bs-shadow-rgb)) !important;
 }
-.test{
-    position: relative;
-    bottom: 9rem;
-    text-align: center;
-    font-weight: bold;
-    font-family: Poppins, sans-serif;
-    /* color: white;
-    text-shadow: 2px 2px 4px #000000; */
-    color: white;
-  text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px rgb(180, 180, 182);
-
+.transparent-bg {
+    background-color: rgba(98, 97, 97, 0.485) !important;
 }
-.test:hover{
-    transition: transform 0.5s ease-in-out;
-    transform: translateY(-15px);
-    text-decoration: underline;
+.transparent-bg-light {
+    background-color: rgba(224, 224, 224, 0.485) !important;
 }
-.mainn{
-    display: flex;
-    position: relative;
-    bottom: 13rem;
-    align-items: center;
-    justify-content: space-evenly;
-    font-family: Poppins, sans-serif;
-
+.card-img-top1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-.card-group{
-    position: relative;
-    bottom: 5rem;
-    font-family: Poppins, sans-serif;
-    gap: 6rem;
-    text-align: center;
-    margin: 0rem 10rem;
-}
-.card:hover{
-    transition: transform 0.5s ease-in-out;
-    transform: translateY(-15px);
+.card-img-top {
+    width: 80%;
+    height: 70%;
+    object-fit: cover;
 }
