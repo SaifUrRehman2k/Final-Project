@@ -5,8 +5,8 @@
     color: --bs-info-bg-subtle;
 }
 body {
-    background-image: url(./assets/images/bg.jpg) !important;
-    backdrop-filter: blur(6px);
+    background-image: linear-gradient(rgba(0, 115, 215, 0.798),rgba(85, 173, 250, 0.798)) !important;
+    /* backdrop-filter: blur(6px); */
     background-position: center;
     background-size: cover;
     min-height: 100vh !important;
@@ -59,7 +59,23 @@ span[class="bl"] {
 #windList {
     background-color: rgba(49, 48, 48, 0.296) !important;
 }
-/* .shadow {
+.shadow {
     --bs-shadow-rgb: 255, 255, 255 !important;
     box-shadow: 5px 10px 6px rgb(var(--bs-shadow-rgb)) !important;
-} */
+}
+.transparent-bg {
+    background-color: rgba(98, 97, 97, 0.485) !important;
+}
+.transparent-bg-light {
+    background-color: rgba(224, 224, 224, 0.485) !important;
+}
+.card-img-top1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-img-top {
+    width: 80%;
+    height: 70%;
+    object-fit: cover;
+}
