@@ -4,8 +4,30 @@
 .info-subtle{
     color: --bs-info-bg-subtle;
 }
+:root {
+    --color-1: #EC760A;
+    --color-2: #F5AB4D;
+    --color-3: #200600;
+    --color-4: #3B0D00;
+    --color-5: #FDAC38;
+}
+.bg-color-1 {
+    background-color: var(--color-1);
+}
+.bg-color-2 {
+    background-color: var(--color-2);
+}
+.bg-color-3 {
+    background-color: var(--color-3);
+}
+.bg-color-4 {
+    background-color: var(--color-4);
+}
+.bg-color-5 {
+    background-color: var(--color-5);
+}
 body {
-    background-image: linear-gradient(rgba(0, 115, 215, 0.798),rgba(85, 173, 250, 0.798)) !important;
+    background-image: linear-gradient(var(--color-1),var(--color-5)) !important;
     /* backdrop-filter: blur(6px); */
     background-position: center;
     background-size: cover;
@@ -25,10 +47,7 @@ body {
     border-radius: 1em !important;
     width: 6px !important;
 } 
-#serchBox {
-    background-color: rgba(132, 132, 132, 0.419);
-}
-h1,h2,h3,h4 {
+h2,h3,h4 {
     color: rgb(255, 253, 253) !important;
 }
 /* #drop {
@@ -64,10 +83,10 @@ span[class="bl"] {
     box-shadow: 5px 10px 6px rgb(var(--bs-shadow-rgb)) !important;
 }
 .transparent-bg {
-    background-color: rgba(98, 97, 97, 0.485) !important;
+    background-color: rgba(255, 255, 255, 0.291) !important;
 }
 .transparent-bg-light {
-    background-color: rgba(224, 224, 224, 0.485) !important;
+    background-color: rgba(253, 253, 253, 0.323) !important;
 }
 .card-img-top1 {
     width: 100%;
@@ -78,4 +97,20 @@ span[class="bl"] {
     width: 80%;
     height: 70%;
     object-fit: cover;
+}
+a#astro:hover {
+    cursor: none;
+}
+.gaper {
+    background-color: transparent;
+    height: 2em;
+}
+
+.card-img-top2 {
+    width: 100%;
+    /* height: auto; */
+    border: 1px solid black;
+    object-fit: cover;
+    overflow-y: hidden !important;
+    filter: brightness(0.7);
 }

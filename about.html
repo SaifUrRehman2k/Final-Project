@@ -20,7 +20,7 @@
 
   <!--------------------------------------------------- header --------------------------------------------------->
 
-  <nav class="navbar navbar-expand-lg bg-primary p-sm-3 p-3 shadow">
+  <nav class="navbar navbar-expand-lg bg-primary p-sm-3 p-3">
     <div class="container-fluid p-0 p-sm-1 justify-content-center justify-content-sm-between">
       <a class="navbar-brand text-light mx-2 text-center text-sm-left" href="#">
         <h1>PakWeather</h1>
@@ -29,34 +29,48 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="offcanvas-lg offcanvas-start" tabindex="-2" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title text-dark" id="offcanvasResponsiveLabel">Responsive offcanvas</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <!-- <p class="mb-0">This is content within an <code>.offcanvas-lg</code>.</p> -->
-          <ul class="nav nav-underline justify-content-end d-flex flex-column flex-lg-row">
-            <li class="nav-item">
-              <a class="nav-link text-dark"  href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-dark"  href="#">Astronomy</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-dark" href="./features.html">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-dark" href="News.html">News</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active text-dark" aria-current="page" href="#">About</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+    
     </div>
   </nav>
+
+  <div class="container-fluid pb-0 pt-1 ps-3 pe-3 d-flex align-items-start justify-content-lg-between justify-content-center w-100 bg-success" id="serchBox">
+    <div class="offcanvas-lg offcanvas-start bg-success"  tabindex="-2" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title text-dark" id="offcanvasResponsiveLabel">Responsive offcanvas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body-dark">
+        <!-- <p class="mb-0">This is content within an <code>.offcanvas-lg</code>.</p> -->
+        <ul class="nav nav-underline justify-content-end d-flex flex-column flex-lg-row">
+          <li class="nav-item">
+            <a class="nav-link text-light" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light disabled" id="astro" href="#">Astronomy</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="./features.html">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="News.html">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-light" aria-current="page" href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>  
+    
+    <form class="d-flex">
+        <form class="d-flex" role="search">
+          <input id="searchBar" class="form-control" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-danger" type="button" id="goBtn">GO</button>
+        </form>
+        <!-- <button class="btn btn-outline-success" type="submit" id="go">GO</button> -->
+      </form>
+
+      
+  </div>    
 
   <!--------------------------------------------------- About us --------------------------------------------------->
 
