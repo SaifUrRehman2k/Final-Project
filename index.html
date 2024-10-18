@@ -17,7 +17,7 @@
 </head>
 
 <body >
-  <nav class="navbar navbar-expand-lg bg-color-2 p-sm-3 p-3">
+  <nav class="navbar navbar-expand-lg bg-primary p-sm-3 p-3 shadow">
     <div class="container-fluid p-0 p-sm-1 justify-content-center justify-content-sm-between">
       <a class="navbar-brand text-light mx-2 text-center text-sm-left" href="#">
         <h1>PakWeather</h1>
@@ -26,68 +26,58 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-    
-    </div>
-  </nav>
-
-    <div class="container-fluid pb-0 pt-1 ps-3 pe-3 d-flex align-items-start justify-content-lg-between justify-content-center w-100 bg-color-3" id="serchBox">
-      <div class="offcanvas-lg offcanvas-start bg-color-3"  tabindex="-2" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
+      <div class="offcanvas-lg offcanvas-start" tabindex="-2" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title text-dark" id="offcanvasResponsiveLabel">Responsive offcanvas</h5>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body-dark">
+        <div class="offcanvas-body">
           <!-- <p class="mb-0">This is content within an <code>.offcanvas-lg</code>.</p> -->
           <ul class="nav nav-underline justify-content-end d-flex flex-column flex-lg-row">
             <li class="nav-item">
-              <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+              <a class="nav-link active text-dark" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light disabled" id="astro" href="#">Astronomy</a>
+              <a class="nav-link text-dark" href="#">Sports</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="./features.html">Features</a>
+              <a class="nav-link text-dark" href="./features.html">Features</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="News.html">News</a>
+              <a class="nav-link text-dark" href="#">Pricing</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="about.html">About</a>
+              <a class="nav-link text-dark" href="#">About</a>
             </li>
           </ul>
         </div>
-      </div>  
-      
-      <form class="d-flex">
+      </div>
+    </div>
+  </nav>
+
+    <div class="container-fluid p-3 d-flex justify-content-center w-100" id="serchBox">
+        <form class="d-flex">
           <form class="d-flex" role="search">
             <input id="searchBar" class="form-control" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-danger" type="button" id="goBtn">GO</button>
           </form>
           <!-- <button class="btn btn-outline-success" type="submit" id="go">GO</button> -->
         </form>
-
-        
-    </div>                      
+    </div>
     <!-- ------- card grids -------- -->
 
     
 
-    <!-- <div id="cardContainer" class="row row-cols-1 shadow row-cols-md-2 g-3 rounded-2 m-auto mt-4 mb-4 pb-4 container">
+    <div id="cardContainer" class="row row-cols-1 shadow row-cols-md-2 g-3 rounded-2 m-auto mt-4 mb-4 pb-4 container">
       <div class="col-24 col-sm-12 d-flex align-items-center justify-content-center">
         <div class="card text-bg-dark">
           <img src="./assets/images/pexels-veeterzy-114979.jpg" class="card-img" alt="...">
           <div class="card-img-overlay d-flex flex-column align-items-start justify-content-center p-4">
             <div id="condition" class="d-flex flex-column justify-content-around">
-              <div id="icon" class=" d-flex align-items-start justify-content-start">N/A</div>
-              <h4 class="text-warning"> 
-                <svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px" fill="red"><path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/></svg>      
-                <span id="text">N/A</span>
-              </h4>
+              <div id="icon" class=" d-flex align-items-start justify-content-start">O</div>
+              <h4 id="text" class="text-warning">N/A</h4>
             </div>
-            <h3 class="card-text">
-              <svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px" fill="blue"><path d="M480-80q-83 0-141.5-58.5T280-280q0-48 21-89.5t59-70.5v-320q0-50 35-85t85-35q50 0 85 35t35 85v320q38 29 59 70.5t21 89.5q0 83-58.5 141.5T480-80Zm-40-440h80v-40h-40v-40h40v-80h-40v-40h40v-40q0-17-11.5-28.5T480-800q-17 0-28.5 11.5T440-760v240Z"/></svg>
-              <span id="temp_c">0</span>°C
-            </h3>
+            <h3 class="card-text"><span id="temp_c">0</span>°C</h3>
             <h4 class="card-text">Feels like <span id="feelslike_c">0</span>°C</h4>
             <p class="card-text">last updated: <small class="text-body-light bl" id="last_updated">N/A</small></p>
           </div>
@@ -99,7 +89,7 @@
         <div class="col">
           <div class="card mb-3 m-auto" style="max-width: 18rem;">
             <div class="card-header d-flex flex-row justify-content-start align-items-center gap-3 p-1 ms-2">
-              <h5 class="text-dark">Cloud</h5>
+              <!-- <h5 class="text-dark">Cloud</h5> -->
               <svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px" fill="#676767"><path d="M532-131q-6 5-12.5 8t-14.5 3q-8 0-16-3.5t-14-9.5q-41-44-60.5-90T395-320q0-37 11-78t38-106q23-57 32-87.5t9-56.5q0-34-15-63.5T423-771q-6-6-9.5-14t-3.5-16q0-8 3-14.5t8-12.5q6-6 13.5-9t15.5-3q8 0 15 3t13 8q44 41 65.5 86t21.5 95q0 35-10.5 73.5T518-474q-25 60-34 92t-9 61q0 35 14.5 67.5T534-188q5 6 8 13t3 15q0 8-3 15.5T532-131Zm195 0q-6 5-12.5 8t-14.5 3q-8 0-16-3.5t-14-9.5q-41-44-60.5-89.5T590-319q0-37 11-79t38-106q23-57 32-87t9-56q0-34-15-64.5T618-771q-6-6-9-13.5t-3-15.5q0-8 2.5-14.5T616-827q6-6 14-9.5t16-3.5q8 0 14.5 3t12.5 8q44 41 65.5 86t21.5 95q0 35-10.5 73.5T713-473q-25 60-34 92t-9 60q0 35 15 68.5t45 65.5q5 6 7.5 13t2.5 14q0 8-3 16t-10 13Zm-390 0q-6 5-12.5 8t-14.5 3q-8 0-16-3.5t-14-9.5q-41-44-60.5-89.5T200-319q0-37 11-79t38-106q23-57 32-87t9-56q0-34-15-64.5T228-771q-7-6-10-13.5t-3-15.5q0-8 3-15t8-13q6-6 13.5-9t15.5-3q8 0 15 3t13 8q44 41 65.5 85.5T370-648q0 35-10 73.5T324-474q-25 60-34 92t-9 61q0 35 14.5 68.5T340-187q5 6 7.5 13t2.5 14q0 8-3 16t-10 13Z"/></svg>
               <b>Heat Index</b>
             </div>
@@ -113,7 +103,7 @@
         <div class="col">
           <div class="card mb-3 m-auto" style="max-width: 18rem;">
             <div class="card-header d-flex flex-row justify-content-start align-items-center gap-3 p-1 ms-2">
-              <h5 class="text-dark">Cloud</h5>
+              <!-- <h5 class="text-dark">Cloud</h5> -->
               <svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px" fill="#676767"><path d="M480-100q-133 0-226.5-92T160-416q0-63 24.5-120.5T254-638l226-222 226 222q45 44 69.5 101.5T800-416q0 132-93.5 224T480-100Zm0-80q100 0 170-68.5T720-416q0-47-18-89.5T650-580L480-748 310-580q-34 32-52 74.5T240-416q0 99 70 167.5T480-180Z"/></svg>
               <b>Humidity</b>
             </div>
@@ -127,7 +117,7 @@
         <div class="col">
           <div class="card mb-3 m-auto" style="max-width: 18rem;">
             <div class="card-header d-flex flex-row justify-content-start align-items-center gap-3 p-1 ms-2">
-              <h5 class="text-dark">Cloud</h5>
+              <!-- <h5 class="text-dark">Cloud</h5> -->
               <svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px" fill="#676767"><path d="M620-520q-25 0-42.5-17.5T560-580q0-17 9.5-34.5t20.5-32q11-14.5 20.5-24l9.5-9.5 9.5 9.5q9.5 9.5 20.5 24t20.5 32Q680-597 680-580q0 25-17.5 42.5T620-520Zm160-120q-25 0-42.5-17.5T720-700q0-17 9.5-34.5t20.5-32q11-14.5 20.5-24l9.5-9.5 9.5 9.5q9.5 9.5 20.5 24t20.5 32Q840-717 840-700q0 25-17.5 42.5T780-640Zm0 240q-25 0-42.5-17.5T720-460q0-17 9.5-34.5t20.5-32q11-14.5 20.5-24l9.5-9.5 9.5 9.5q9.5 9.5 20.5 24t20.5 32Q840-477 840-460q0 25-17.5 42.5T780-400ZM360-120q-83 0-141.5-58.5T160-320q0-48 21-89.5t59-70.5v-240q0-50 35-85t85-35q50 0 85 35t35 85v240q38 29 59 70.5t21 89.5q0 83-58.5 141.5T360-120ZM240-320h240q0-29-12.5-54T432-416l-32-24v-280q0-17-11.5-28.5T360-760q-17 0-28.5 11.5T320-720v280l-32 24q-23 17-35.5 42T240-320Z"/></svg>
               <b>Dew Point</b>
             </div>
@@ -141,7 +131,7 @@
         <div class="col">
           <div class="card mb-3 m-auto" style="max-width: 18rem;">
             <div class="card-header d-flex flex-row justify-content-start align-items-center gap-3 p-1 ms-2">
-              <h5 class="text-dark">Cloud</h5>
+              <!-- <h5 class="text-dark">Cloud</h5> -->
               <svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px" fill="#676767"><path d="M260-160q-91 0-155.5-63T40-377q0-78 47-139t123-78q25-92 100-149t170-57q117 0 198.5 81.5T760-520q69 8 114.5 59.5T920-340q0 75-52.5 127.5T740-160H260Zm0-80h480q42 0 71-29t29-71q0-42-29-71t-71-29h-60v-80q0-83-58.5-141.5T480-720q-83 0-141.5 58.5T280-520h-20q-58 0-99 41t-41 99q0 58 41 99t99 41Zm220-240Z"/></svg>      
               <b>Cloud</b> 
             </div>
@@ -154,159 +144,43 @@
       </div>
     </div>
 
-    <div class="gaper"></div>
-
-
-    <div class="container-sm">
-      <div class="row row-cols-md-2 row-cols-1">
-        <div id="locationCard" class="card col">
-          <div class="row g-0">
-            <div class="col rounded-right">
-              <div class="card-body">
-                <h2 class="card-title">
-                  <svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px" fill="red"><path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/></svg>
-                  Current Location
-                </h2>
-                <h3 class="card-title text-warning" id="nameCity">N/A</h3>
-                <ul class="list-group list-group-flush rounded-2">
-                  <li class="list-group-item list-group-item-primary">Latitude: <span id="lat">0</span>°</li>
-                  <li class="list-group-item list-group-item-primary">Longitude: <span id="lon">0</span>°</li>
-                  <li class="list-group-item list-group-item-primary">Localtime: <span id="localtime">0-0-0-0</span></li>
-                  <li class="list-group-item list-group-item-primary">Region: <span id="region">N/A</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="windCard" class="card col">
-          <div class="p-3 d-flex flex-column justify-content-between gap-3">
-            <div id="windIcon" class="d-flex flex-nowrap justify-content-start gap-3"> 
-              <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#F0F0F0"><path d="M460-160q-50 0-85-35t-35-85h80q0 17 11.5 28.5T460-240q17 0 28.5-11.5T500-280q0-17-11.5-28.5T460-320H80v-80h380q50 0 85 35t35 85q0 50-35 85t-85 35ZM80-560v-80h540q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43h-80q0-59 40.5-99.5T620-840q59 0 99.5 40.5T760-700q0 59-40.5 99.5T620-560H80Zm660 320v-80q26 0 43-17t17-43q0-26-17-43t-43-17H80v-80h660q59 0 99.5 40.5T880-380q0 59-40.5 99.5T740-240Z"/></svg>
-              <h2>Wind</h2>
-            </div>
-            <h5 class="card-title">Direction: <span id="wind_dir">N/A</span></h5>
-            <div class="card" style="max-width: 80% !important;">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item list-group-item-primary">Speed: <span id="wind_kph">0</span>kph</li>
-                <li class="list-group-item list-group-item-primary">Degree: <span id="wind_degree">0</span>°</li>
-                <li class="list-group-item list-group-item-primary">Wind-Cill: <span id="windchill_c">0</span>°C</li>
+    <div class="container d-flex flex-sm-row flex-column align-items-center justify-content-center gap-5">
+      <div id="locationCard" class="card shadow align-items-start justify-content-around w-md-50 w-100" style="max-width: 25em;">
+        <div class="row g-0">
+          <div class="col rounded-right">
+            <div class="card-body">
+              <h2 class="card-title">Current Location</h2>
+              <h3 class="card-title text-warning" id="nameCity">N/A</h3>
+              <ul class="list-group list-group-flush rounded-2">
+                <li class="list-group-item list-group-item-primary">Latitude: <span id="lat">0</span>°</li>
+                <li class="list-group-item list-group-item-primary">Longitude: <span id="lon">0</span>°</li>
+                <li class="list-group-item list-group-item-primary">Localtime: <span id="localtime">0-0-0-0</span></li>
+                <li class="list-group-item list-group-item-primary">Region: <span id="region">N/A</span></li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-    </div> -->
 
-    <div class="container-fluid mt-4 mb-5">
-      <div class="card border-0 rounded-2 shadow text-bg-dark" style="max-height: 40em;">
-        <img src="./assets/images/sun.jpg" class="card-img card-img-top2"alt="...">
-        <div class="card-img-overlay row p-0 g-0">
-          <div class="col-md-8 col-12 ps-5 p-3 d-flex flex-column align-items-start justify-content-between">
-            <div>
-              <p class="card-text">day</p>
-              <p class="card-text"><small>Month</small></p>
-            </div>
-
-            <div>
-              <h4>Icon</h4>
-              <h5 class="card-title lead fs-2">Condition</h5>
-            </div>
-
-            <div>
-              <h2 class="card-title display-2 fw-normal">10°C</h2>
-              <p>City, Country</p>
-            </div>
-            
-            
+      <div id="windCard" class="card w-md-50 w-100 shadow" style="height: 17em; max-width: 20em;">
+        <div class="p-3 d-flex flex-column justify-content-between gap-3">
+          <div id="windIcon" class="d-flex flex-nowrap justify-content-start gap-3"> 
+            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#F0F0F0"><path d="M460-160q-50 0-85-35t-35-85h80q0 17 11.5 28.5T460-240q17 0 28.5-11.5T500-280q0-17-11.5-28.5T460-320H80v-80h380q50 0 85 35t35 85q0 50-35 85t-85 35ZM80-560v-80h540q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43h-80q0-59 40.5-99.5T620-840q59 0 99.5 40.5T760-700q0 59-40.5 99.5T620-560H80Zm660 320v-80q26 0 43-17t17-43q0-26-17-43t-43-17H80v-80h660q59 0 99.5 40.5T880-380q0 59-40.5 99.5T740-240Z"/></svg>
+            <h2>Wind</h2>
           </div>
-
-          <div class="transparent-bg-light col-md-4 col-12 p-0 d-flex flex-column align-items-center justify-content-center">
-            <dl class="row ps-4 p-4 gy-5">
-              <div class="d-flex flex-row border-bottom border-1 border-light">
-                <dt class="col-sm-6"><h4 class="fs-2 lead">Wind</h4></dt>
-                <dd class="col-sm-6 d-flex align-items-end justify-content-center">5 kph</dd>
-              </div>
-
-              <div class="d-flex flex-row border-bottom border-1 border-light">
-                <dt class="col-sm-6"><h4 class="fs-2 lead">Humidity</h4></dt>
-                <dd class="col-sm-6 d-flex align-items-end justify-content-center">50%</dd>
-              </div>
-
-              <div class="d-flex flex-row border-bottom border-1 border-light">
-                <dt class="col-sm-6"><h4 class="fs-2 lead">Dew point</h4></dt>
-                <dd class="col-sm-6 d-flex align-items-end justify-content-center">5°C</dd>
-              </div>
-
-              <div class="d-flex flex-row border-bottom border-1 border-light">
-                <dt class="col-sm-6 text-truncate"><h4 class="fs-2 lead">UV Index</h4></dt>
-                <dd class="col-sm-6 d-flex align-items-end justify-content-center">5</dd> 
-              </div>
-
-              <div class="d-flex flex-row border-bottom border-1 border-light">
-                <dt class="col-sm-6"><h4 class="fs-2 lead">Cloud</h4></dt>
-                <dd class="col-sm-6 d-flex align-items-end justify-content-center">5 pct</dd>
-              </div> 
-              
-            </dl>
+          <h5 class="card-title">Direction: <span id="wind_dir">N/A</span></h5>
+          <div class="card" style="max-width: 80% !important;">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item list-group-item-primary">Speed: <span id="wind_kph">0</span>kph</li>
+              <li class="list-group-item list-group-item-primary">Degree: <span id="wind_degree">0</span>°</li>
+              <li class="list-group-item list-group-item-primary">Wind-Cill: <span id="windchill_c">0</span>°C</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
 
-
-    <!-- <div class="gaper "></div>
-    <div class="gaper "></div>
-    <div class="gaper"></div> -->
-
-
-
-    <!-- <hr> -->
-
-    <section class="bg-primary p-3"> 
-      <div class="container-sm">
-        <div class="row">
-          <div class="card mb-3 col-12 transparent-bg">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img src="Assets/IMG-20241011-WA0017_424x270.jpg" class="img-fluid rounded-start" alt="...">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body w-75 d-flex flex-column gap-3">
-                  <h3 class="card-title text-dark">Rising Temprature in a week in Coastal Areas of Pakistan.</h3>
-                  <p class="card-text">Pakistan Weather Forecast-Pakistan Surface Temprature On Wednesday 25 Sep At 8am PKT. <a href="News.html">view more...</a></p>
-                  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="card mb-3 col-8 container-fluid p-0 transparent-bg">
-            <img src="Assets/IMG-20241011-WA0014_424x270.jpg" class="card-img-top w-100" alt="...">
-            <div class="card-body border-top border-1 border-dark">
-              <h3 class="card-title text-dark">Heavy Rain Expected in Upper Sindh.</h3>
-              <p class="card-text">Pakistan Weather Forecast-Heavy Downpour Event Over Upper Sindh In September, 2012! <a href="News.html">view more...</a> </p>
-              <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-
-          <div class="card mb-3 col-4 transparent-bg d-flex flex-column align-items-start justify-content-start">
-            <img src="Assets/IMG-20241011-WA0012_424x270.jpg" class="card-img-top p-0" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Incoming Heat In Southern Parts of Pakistan</h5>
-              <p class="card-text">Pakistan Weather Forecast-Mainly Hot&Humid Weather Likely In Most Parts Of Country! <a href="News.html">view more...</a></p>
-              <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      
-    </section>
-
-
-
-  <div class="container-fluid bg-color-2 footer navbar-fixed-bottom">
+  <div class="container-fluid bg-primary footer navbar-fixed-bottom">
     <footer class="d-flex flex-wrap justify-content-sm-between justify-content-center align-items-center py-3 mt-3 border-top gap-3">
       <div class="col-md-6 d-flex align-items-center gap-sm-3 gap-1 flex-wrap justify-content-center">
         <a href="/" class="nav-link">
